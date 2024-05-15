@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../../styles/Home.module.css";
 import { useCallback, useEffect, useState } from "react";
+import NotificationIcon from "../components/NotificationIcon";
 
 type HomeProps = NextPage & {
   fcmToken?: string;
@@ -96,6 +97,7 @@ const Home = ({ fcmToken, getToken }: HomeProps) => {
       </Head>
 
       <main className={styles.main}>
+        <NotificationIcon/>
         <h2 className={styles.title}>
           {"Welcome to Next.Js\nFirebase Messaging Example"}
         </h2>
